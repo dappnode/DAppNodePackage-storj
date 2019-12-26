@@ -1,0 +1,32 @@
+{
+  "name": "storj.public.dappnode.eth",
+  "version": "0.0.1",
+  "upstreamVersion": "v0.28.2",
+  "shortDescription": "Earn tokens by sharing your disk space on the Storj network",
+  "description": "Storj is the supply-side node for offering hard drive capacity and bandwidth to their suite of decentralized applications. Storj pays you for your unused disk space and connection in **STORJ tokens!**",
+  "type": "service",
+  "author": "edu",
+  "backup": [
+    {
+      "name": "identity",
+      "path": "/root/.local/share/storj/identity/storagenode"
+    }
+  ],
+  "globalEnvs": {
+    "all": true
+  },
+  "categories": [
+    "Economic incentive"
+  ],
+  "links": {
+    "Dashboard": "http://storj.public.dappnode/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dappnode/DAppNodePackage-storj.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-storj/issues"
+  },
+  "license": "GPL-3.0"
+}

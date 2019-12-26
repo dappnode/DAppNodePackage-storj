@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  storj.public.dappnode.eth:
+    image: 'storj.public.dappnode.eth:0.0.1'
+    build: ./build
+    restart: always
+    ports:
+      - '28967:28967'
+    volumes:
+      - 'storj_identity:/root/.local/share/storj/identity/storagenode'
+      - 'storj_storage:/app/config'
+    environment:
+      - AUTH_TOKEN
+      - WALLET
+      - EMAIL
+      - BANDWIDTH
+      - STORAGE
+volumes:
+  storj_identity: {}
+  storj_storage: {}
