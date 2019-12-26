@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   storj.public.dappnode.eth:
-    image: 'storj.public.dappnode.eth:0.0.1'
+    image: 'storj.public.dappnode.eth:0.0.2'
     build: ./build
     restart: always
     ports:
