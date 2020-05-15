@@ -1,7 +1,7 @@
 {
   "name": "storj.public.dappnode.eth",
-  "version": "0.0.1",
-  "upstreamVersion": "v0.28.2",
+  "version": "0.0.7",
+  "upstreamVersion": "v1.3.3",
   "shortDescription": "Earn tokens by sharing your disk space on the Storj network",
   "description": "Storj is the supply-side node for offering hard drive capacity and bandwidth to their suite of decentralized applications. Storj pays you for your unused disk space and connection in **STORJ tokens!**",
   "type": "service",
