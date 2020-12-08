@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   storj.public.dappnode.eth:
-    image: "storj.public.dappnode.eth:0.0.8"
+    image: "storj.public.dappnode.eth:0.0.10"
     build:
       context: ./build
       args:
