@@ -1,17 +1,17 @@
-version: '3.4'
+version: "3.4"
 services:
   storj.public.dappnode.eth:
-    image: 'storj.public.dappnode.eth:0.0.8'
+    image: "storj.public.dappnode.eth:0.0.8"
     build:
       context: ./build
       args:
         UPSTREAM_VERSION: v1.22.2
     restart: always
     ports:
-      - '28967:28967'
+      - "28967:28967"
     volumes:
-      - 'storj_identity:/root/.local/share/storj/identity/storagenode'
-      - 'storj_storage:/root/.local/share/storj/storagenode'
+      - "storj_identity:/root/.local/share/storj/identity/storagenode"
+      - "storj_storage:/root/.local/share/storj/storagenode"
     environment:
       - AUTH_TOKEN
       - WALLET

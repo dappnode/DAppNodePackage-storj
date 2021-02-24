@@ -2,6 +2,14 @@
 
 IDENTITY_PATH=/root/.local/share/storj/identity/storagenode
 STORAGE_PATH=/root/.local/share/storj/storagenode
+IDENTITY_FILE=/app/backup.tar.xz
+
+
+if [ -f "$IDENTITY_FILE" ]; then
+    echo "$IDENTITY_FILE exists."
+		mkdir -p ${IDENTITY_PATH}
+		tar -xf ${IDENTITY_FILE} -C ${IDENTITY_PATH} --strip-components 1
+fi
 
 if [ ! -f ${IDENTITY_PATH}/identity.key ] && [ ! -f ${IDENTITY_PATH}/identity.cert ] && [ ! -f ${IDENTITY_PATH}/ca.key ] && [ ! -f ${IDENTITY_PATH}/ca.cert ]; then
 	identity create storagenode
