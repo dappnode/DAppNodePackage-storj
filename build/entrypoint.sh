@@ -24,7 +24,7 @@ if [ "${AUTH_TOKEN}" == "" ] || [ "${WALLET}" == "" ] || [ "${STORAGE}" == "" ];
 fi
 
 if [[ ! -f "${STORAGE_PATH}/config.yaml" ]]; then
-	storagenode setup --config-dir ${STORAGE_PATH} --identity-dir ${IDENTITY_PATH}
+	./storagenode setup --config-dir ${STORAGE_PATH} --identity-dir ${IDENTITY_PATH}
 fi
 
 RUN_PARAMS="${RUN_PARAMS:-} --config-dir ${STORAGE_PATH}"
