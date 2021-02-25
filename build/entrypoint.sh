@@ -1,6 +1,15 @@
 #!/bin/bash 
 
-IDENTITY_PATH=/app/identity
+IDENTITY_PATH=/root/.local/share/storj/identity/storagenode
+STORAGE_PATH=/root/.local/share/storj/storagenode
+IDENTITY_FILE=/app/backup.tar.xz
+
+
+if [ -f "$IDENTITY_FILE" ]; then
+    echo "$IDENTITY_FILE exists."
+		mkdir -p ${IDENTITY_PATH}
+		tar -xf ${IDENTITY_FILE} -C ${IDENTITY_PATH} --strip-components 1
+fi
 
 if [ ! -f ${IDENTITY_PATH}/identity.key ] && [ ! -f ${IDENTITY_PATH}/identity.cert ] && [ ! -f ${IDENTITY_PATH}/ca.key ] && [ ! -f ${IDENTITY_PATH}/ca.cert ]; then
 	identity create storagenode
@@ -22,12 +31,12 @@ if [ "${AUTH_TOKEN}" == "" ] || [ "${WALLET}" == "" ] || [ "${STORAGE}" == "" ];
     while true; do sleep 5; done
 fi
 
-if [[ ! -f "config/config.yaml" ]]; then
-	storagenode setup --config-dir config --identity-dir identity
+if [[ ! -f "${STORAGE_PATH}/config.yaml" ]]; then
+	./storagenode setup --config-dir ${STORAGE_PATH} --identity-dir ${IDENTITY_PATH}
 fi
 
-RUN_PARAMS="${RUN_PARAMS:-} --config-dir config"
-RUN_PARAMS="${RUN_PARAMS:-} --identity-dir identity"
+RUN_PARAMS="${RUN_PARAMS:-} --config-dir ${STORAGE_PATH}"
+RUN_PARAMS="${RUN_PARAMS:-} --identity-dir ${IDENTITY_PATH}"
 RUN_PARAMS="${RUN_PARAMS:-} --metrics.app-suffix=-alpha"
 RUN_PARAMS="${RUN_PARAMS:-} --metrics.interval=30m"
 RUN_PARAMS="${RUN_PARAMS:-} --contact.external-address=${_DAPPNODE_GLOBAL_HOSTNAME}:28967"

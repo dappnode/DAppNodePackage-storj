@@ -6,13 +6,28 @@ fields:
       name: AUTH_TOKEN
     title: Your auth token
     description: >-
-      You will need an Auth token. If you have not received an auth token yet, got to our discord channel [community@dappnode.io]() and ask for it; It should look like this:
-      
-      
-      ```nodler@dappnode.io:1DuEZCeRidy8W8ey8Lwy8VMXWYVdmehVZUQjve8u8HsndgxYKgUzNnnfkUGZP88tJTzvFSyXvFTpKRhHSpZFLz1TcU8bBg```
+      You will need an Auth token. If you have not received an auth token yet, got to [storj website](https://registration.storj.io/) and get a new one.    
+
+      The auth token should looks something similar to:
+
+      ```mike@gmail.com:1DuEZCeRidy8W8ey8Lwy8VMXWYVdmehVZUQjve8u8HsndgxYKgUzNnnfkUGZP88tJTzvFSyXvFTpKRhHSpZFLz1TcU8bBg```
     pattern: "^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*:[A-Za-z0-9]{94}$"
     patternErrorMessage: Must be a valid auth token
     required: true
+
+  - id: identity
+    target:
+      type: fileUpload
+      path: /app/backup.tar.xz
+    title: Your identity backup
+    description: >-
+      Upload your identity backup and restore your identity. If you do not have identity yet skip this step, the identity will be auto generated.
+
+      The backup must be in **tar.xz** format.
+
+    patternErrorMessage: Must be a valid auth token
+    required: false
+
   - id: wallet
     target:
       type: environment
@@ -20,11 +35,11 @@ fields:
     title: Your wallet
     description: >-
       An Ethereum wallet address where you will receive STORJ token payouts for running the node.
-      
-      
+
+
       If you don't have an Ethereum address, learn [how to obtain a valid payout address](https://support.storj.io/hc/en-us/articles/360026611692-How-do-I-hold-STORJ-What-is-a-valid-address-or-compatible-wallet-).
-      
-      
+
+
       ⚠️**Warning: an exchange address is not a valid address**⚠️
     pattern: "^0x[a-fA-F0-9]{40}$"
     patternErrorMessage: Must be a valid address (0x1fd16a...)
@@ -37,7 +52,7 @@ fields:
     title: Storage space
     description: >-
       How much disk space you want to allocate to the Storj network.
-      
+
       Be sure not to over-allocate space! Allow at least 10% extra for overhead. If you over-allocate space, you may corrupt your database when the system attempts to store pieces when no more physical space is actually available on your drive. The minimum storage shared requirement is 500 GB, which means you need a disk with at least 550 GB free to allow for the 10% overhead.
     pattern: "^[0-9]*(\\.[0-9]*)?[Tt][Bb]$"
     patternErrorMessage: "The storage space needs to be in the form: `xTB` (without spaces), where the x is the number of Terabytes allocate"

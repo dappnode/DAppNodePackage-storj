@@ -5,22 +5,24 @@
   "shortDescription": "Earn tokens by sharing your disk space on the Storj network",
   "description": "Storj is the supply-side node for offering hard drive capacity and bandwidth to their suite of decentralized applications. Storj pays you for your unused disk space and connection in **STORJ tokens!**",
   "type": "service",
-  "author": "edu",
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+    "Pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)"
+  ],
   "architectures": ["linux/amd64", "linux/arm64"],
   "backup": [
     {
       "name": "identity",
-      "path": "/app/identity"
+      "path": "/root/.local/share/storj/identity/storagenode"
     }
   ],
   "globalEnvs": {
     "all": true
   },
-  "categories": [
-    "Economic incentive"
-  ],
+  "categories": ["Economic incentive"],
   "links": {
-    "Dashboard": "http://storj.public.dappnode/"
+    "ui": "http://storj.public.dappnode/"
   },
   "repository": {
     "type": "git",
