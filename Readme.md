@@ -6,11 +6,9 @@
 
 [![](avatar-min.png)](https://www.youtube.com/watch?v=1RTfUgn69DE&ab_channel=AmandaB.Johnson)
 
-### What is _Storj_ ?
-
 <!--Brief introduction about the source project (official project definition is an option): -->
 
-> Storj is an open-source distributed cloud storage platform based on blockchain technology where anyone can sell their extra hard drive space
+Storj is an open-source distributed cloud storage platform based on blockchain technology where anyone can sell their extra hard drive space
 
 More information about the source project can be found at [their official website](https://storj.io/)
 
@@ -20,7 +18,11 @@ More information about the source project can be found at [their official websit
 
 Because you can be rewarded!
 
+According to their documentation:
+
 > We pay Node Operators for their unused storage and bandwidth, making decentralized storage possible for Tardigrade.io customers. Put your extra space to use and start earning today.
+
+Do not miss it!
 
 ### Requirements
 
@@ -38,6 +40,6 @@ Rquirements to run DAppNode package for Storj
 <!--Table with champion/s mantainers, versions and update status -->
 <!--UPDATED: :x: OR :heavy_check_mark: -->
 
-|      Updated       | DAppNode version | Upstream version |   Champion/s   |
-| :----------------: | :--------------: | :--------------: | :------------: |
-| :heavy_check_mark: |      0.0.9       |     v1.22.2      | @pablomendez95 |
+|      Updated       |   Champion/s   |
+| :----------------: | :------------: |
+| :heavy_check_mark: | @pablomendez95 |
