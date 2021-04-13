@@ -1,11 +1,11 @@
-version: "3.4"
+version: "3.5"
 services:
   storj.public.dappnode.eth:
     image: "storj.public.dappnode.eth:0.0.9"
     build:
       context: ./build
       args:
-        UPSTREAM_VERSION: v1.24.4
+        UPSTREAM_VERSION: v1.26.3
     restart: always
     ports:
       - "28967:28967"
@@ -17,6 +17,7 @@ services:
       - WALLET
       - STORAGE
       - EMAIL
+      - EXTRA_OPTIONS
 volumes:
   storj_identity: {}
   storj_storage: {}
