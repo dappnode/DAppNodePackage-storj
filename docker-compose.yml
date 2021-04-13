@@ -1,4 +1,4 @@
-version: "3.4"
+version: "3.5"
 services:
   storj.public.dappnode.eth:
     image: "storj.public.dappnode.eth:0.0.9"
@@ -17,6 +17,7 @@ services:
       - WALLET
       - STORAGE
       - EMAIL
+      - EXTRA_OPTIONS
 volumes:
   storj_identity: {}
   storj_storage: {}

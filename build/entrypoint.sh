@@ -44,5 +44,6 @@ RUN_PARAMS="${RUN_PARAMS:-} --operator.email=${EMAIL}"
 RUN_PARAMS="${RUN_PARAMS:-} --operator.wallet=${WALLET}"
 RUN_PARAMS="${RUN_PARAMS:-} --storage.allocated-disk-space=${STORAGE}"
 RUN_PARAMS="${RUN_PARAMS:-} --console.address=:80"
+RUN_PARAMS="${RUN_PARAMS:-} ${EXTRA_OPTIONS}"
 
 exec ./storagenode run $RUN_PARAMS "$@"
