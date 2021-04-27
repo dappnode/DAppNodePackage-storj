@@ -5,7 +5,7 @@ services:
     build:
       context: ./build
       args:
-        UPSTREAM_VERSION: v1.26.3
+        UPSTREAM_VERSION: v1.28.2
     restart: always
     ports:
       - "28967:28967"
