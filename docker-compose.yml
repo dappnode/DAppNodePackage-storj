@@ -9,6 +9,7 @@ services:
     restart: always
     ports:
       - "28967:28967"
+      - "28967:28967/udp"
     volumes:
       - "storj_identity:/root/.local/share/storj/identity/storagenode"
       - "storj_storage:/root/.local/share/storj/storagenode"
