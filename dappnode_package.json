@@ -1,7 +1,7 @@
 {
   "name": "storj.public.dappnode.eth",
   "version": "0.0.10",
-  "upstreamVersion": "v1.56.4",
+  "upstreamVersion": "v1.60.1",
   "upstreamRepo": "storj/storj",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Earn tokens by sharing your disk space on the Storj network",
