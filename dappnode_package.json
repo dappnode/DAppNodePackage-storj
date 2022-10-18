@@ -19,9 +19,7 @@
       "path": "/root/.local/share/storj/identity/storagenode"
     }
   ],
-  "globalEnvs": {
-    "all": true
-  },
+  "globalEnvs": [{ "envs": ["HOSTNAME"], "services": ["storj.public.dappnode.eth"] }],
   "categories": ["Economic incentive"],
   "links": {
     "ui": "http://storj.public.dappnode/"
