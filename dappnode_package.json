@@ -1,7 +1,7 @@
 {
   "name": "storj.public.dappnode.eth",
   "version": "0.0.10",
-  "upstreamVersion": "v1.65.1",
+  "upstreamVersion": "v1.68.1",
   "upstreamRepo": "storj/storj",
   "upstreamArg": "UPSTREAM_VERSION",
   "shortDescription": "Earn tokens by sharing your disk space on the Storj network",
@@ -19,7 +19,12 @@
       "path": "/root/.local/share/storj/identity/storagenode"
     }
   ],
-  "globalEnvs": [{ "envs": ["HOSTNAME"], "services": ["storj.public.dappnode.eth"] }],
+  "globalEnvs": [
+    {
+      "envs": ["HOSTNAME"],
+      "services": ["storj.public.dappnode.eth"]
+    }
+  ],
   "categories": ["Economic incentive"],
   "links": {
     "ui": "http://storj.public.dappnode/"
